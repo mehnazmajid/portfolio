@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehnaz Majid | Graphic Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #d1b3e0;
+            --text-dark: #333;
+            --bg-light: #f9f7fa;
+        }
 
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-purple);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 80px 10% ;
+            min-height: 80vh;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            line-height: 0.9;
+            margin: 0;
+        }
+
+        .hero-tagline {
+            background: var(--primary-purple);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .hero-image img {
+            width: 400px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            border: 10px solid var(--primary-purple);
+        }
+
+        /* Section Headers */
+        .section-header {
+            background-color: var(--primary-purple);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .section-header h2 { font-family: 'Playfair Display', serif; margin: 0; font-size: 32px; }
+
+        /* Services & Projects Grid */
+        .container { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            border: 2px solid #eee;
+        }
+
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card h3 { padding: 15px; margin: 0; }
+        .card p { font-size: 13px; padding: 0 20px; color: #666; }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            padding: 80px 10%;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            width: 400px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            border: 8px solid var(--primary-purple);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            padding: 50px 10%;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            border: 2px solid var(--primary-purple);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn-send {
+            background: var(--primary-purple);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">mehnazmajid.com</div>
+        <div class="nav-links">
+            <a href="#projects">projects</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#contact">contact me</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Graphic<br>designer<br><span style="margin-left: 100px;">portfolio</span></h1>
+            <div class="hero-tagline">Branding • Social Media • UI Design</div>
+        </div>
+        <div class="hero-image">
+            <img src="your-hero-image.jpg" alt="Mehnaz Majid">
+        </div>
+    </section>
+
+    <div class="section-header" id="services">
+        <h2>My services</h2>
+        <p>Creative design services to help brands stand out.</p>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="service1.jpg" alt="Branding">
+            <h3>Brand Identity</h3>
+            <p>Creating unique logos and visuals that represent your business.</p>
+        </div>
+        <div class="card">
+            <img src="service2.jpg" alt="Social Media">
+            <h3>Social Media Design</h3>
+            <p>Modern and engaging graphics for your online presence.</p>
+        </div>
+        <div class="card">
+            <img src="service3.jpg" alt="UI Design">
+            <h3>UI / Web Design</h3>
+            <p>Clean and user-friendly website and app interface designs.</p>
+        </div>
+    </div>
+
+    <div class="section-header" id="about">
+        <h2>About me</h2>
+    </div>
+    <section class="about-section">
+        <div>
+            <h3>About me:</h3>
+            <p>I'm a passionate graphic designer who enjoys creating clean, modern, and visually appealing designs...</p>
+            <div style="margin: 20px 0;">
+                <span class="hero-tagline">Brand Identity</span>
+                <span class="hero-tagline">Logo Design</span>
+            </div>
+            <h4>Tools i used:</h4>
+            <p>Ps | Ai | Canva | Figma</p>
+        </div>
+        <img src="your-about-image.jpg" class="about-img" alt="Mehnaz">
+    </section>
+
+    <div class="section-header" id="contact">
+        <h2>Contact me</h2>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Email:</h3>
+            <p>mehnazmajid32@gmail.com</p>
+            <h3>Location:</h3>
+            <p>Pakistan, Karachi</p>
+            <h3>Availability:</h3>
+            <p>Open for freelance projects</p>
+        </div>
+        <div class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button class="btn-send">message send</button>
+        </div>
+    </div>
+
+</body>
+</html>
